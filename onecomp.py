@@ -1,0 +1,31 @@
+# -*- coding: cp950 -*-
+def onecomp(x,b,d,a,e,i,j):
+    b=[]
+    d=[]
+    while 0 <= x <= 2**31:
+        a = x%2
+        x=x/2
+        b.append(a)
+        if x<1:
+            g=int(''.join(str(i) for i in b[::-1]))               #﹃计て
+            print '秈' ,'0'+"{:0>31d}".format(g) #32才
+            break
+        
+    while -2**31 < x < 0:
+        e = (x)%2
+        x=(x+1)/2                                                                    #-0.5俱计い埃2穦秈タ计いぃ穦秈 ┮1ㄏㄤ
+        d.append(1-e)
+        if 0 <= x <= 1:
+            d.append(1)
+            f=int(''.join(str(i) for i in d[::-1]))
+            print '秈' ,'1'+"{:1>31d}".format(f)
+            break
+    return x
+
+
+while True:
+    print '块秈',
+    c=input()
+    b=[]
+    d=[]
+    x=onecomp(c,b,d,1,1,1,1)
